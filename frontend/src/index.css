@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-slate-950 text-slate-100;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .agent-card-active {
+    @apply border-opacity-100;
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .tool-call-line {
+    @apply font-mono text-xs;
+  }
+
+  .score-bar {
+    transition: width 1s ease-out;
+  }
+
+  .glow-dot {
+    @apply w-2 h-2 rounded-full;
+    box-shadow: 0 0 8px currentColor;
+  }
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-600;
+}

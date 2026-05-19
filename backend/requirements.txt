@@ -1,0 +1,15 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+sse-starlette>=2.1.0
+boto3>=1.35.0
+pydantic>=2.9.0
+
+# Strands Agents SDK (real agent execution + Bedrock model provider)
+strands-agents>=1.0.0
+
+# MCP protocol (real tool servers)
+mcp>=1.9.0
+
+# AgentCore Memory SDK (optional — for real memory persistence)
+# Install separately when deploying with memory:
+#   pip install 'bedrock-agentcore[strands-agents]'
